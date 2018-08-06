@@ -1,1 +1,1 @@
-var app = angular.modude("elastic",[]);
+//var app = angular.modude("elastic",[]);
