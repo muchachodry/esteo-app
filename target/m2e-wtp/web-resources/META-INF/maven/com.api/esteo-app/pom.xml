@@ -51,6 +51,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <scope>test</scope>
+        </dependency>
 		<!-- Servlet -->
 		<!-- from https://github.com/spring-projects/spring-boot/blob/master/spring-boot-samples/spring-boot-sample-web-jsp/pom.xml -->
 		<dependency>
@@ -98,7 +103,11 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>        
 	</dependencies>
    
    
@@ -127,5 +136,6 @@
 	        </snapshots>
 	    </repository>
     </repositories>
+    
 
 </project>

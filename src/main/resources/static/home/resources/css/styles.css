@@ -1,0 +1,47 @@
+/*COLORS*/
+.bg-morado{
+	background-color: #563d7c;
+}
+
+/*INPUT BARS*/
+.input-bar {
+	width:100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    margin-bottom: 20px;
+    border: 0px;
+    border-bottom: 1px solid #553d7b;
+    transition: .2s;
+}
+.input-bar:hover {
+    border-bottom: 3px solid #553d7b;
+    transition: .2s;
+    margin-bottom: 22px;
+}
+input:focus {
+    outline: none !important;
+}
+input:visited {
+    background-color: #fff !important;
+}
+
+/*BOTONES*/
+.log-in-btn{
+	color: #fff;
+}
+.btn-primary {
+    border-color: #cbbde2;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(53, 21, 183, 0.35);
+}

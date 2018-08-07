@@ -7,29 +7,23 @@
 <%@ include file="../jspf/header.jspf"%>
 
 <div class="container">
-	<div class="row">
-		<div class="col-4 align-self-center login-form">	
-		    <form action="/login" method="post">               
+	<div class="row align-items-center">
+		<div class="col-4 offset-4 align-self-center">	
+		    <form action="/esteo-app/login" method="post">               
 		        <fieldset>
-		            <legend>Please Login</legend>
+		            <legend>Acceso: </legend>
 		            <div class="form-group">
-			            <input class="form-control login-field" value=""
-							placeholder="Enter your username" id="username" type="text" name="username"/>
-						<label class="login-field-icon fui-user" for="username"></label> 
+			            <input class="input-bar" value="" placeholder="Usuario" type="text" name="username"/>
+			        	<input class="input-bar" value="" placeholder="Password" id="password" name="password" type="password">
 			        </div>    
-			        <div class="form-group">
-			        	<input class="form-control login-field" value="" placeholder="Password" id="password" name="password" type="password">
-	             		<label class="login-field-icon fui-lock" for="password"></label>
-		            </div>
-		            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-		 
+			        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 		            <div class="form-actions">
-		            	<div class="col-md-6 col-xs-12">
-		                	<button class="btn  btn-lg btn-block btn-main-color" type="submit" class="btn">Log in</button>
+		            	<div class="col-4 offset-4">
+		                	<button class="btn btn-lg btn-primary log-in-btn bg-morado" type="submit">Entrar</button>
 		                </div>
-		                <div class="col-md-6 col-xs-12">
+		                <!-- <div class="col-md-6 col-xs-12">
 		               	 <a href="/registro" class="btn  btn-lg btn-block btn-main-color"  class="btn">Sign up</a>
-		                </div>
+		                </div> -->
 		            </div>
 		        </fieldset>
 		    </form>

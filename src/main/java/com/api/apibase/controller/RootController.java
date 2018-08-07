@@ -27,7 +27,7 @@ public class RootController {
 
 	@ModelAttribute
 	public void addAttributes(Model model) {
-	    model.addAttribute("s","/static/home/resources");
+	    model.addAttribute("s","/esteo-app/static/home/resources");
 	}
 	
 	@GetMapping({"", "/"})
@@ -36,7 +36,7 @@ public class RootController {
 		log.info("Dentro de información cliente");
 		
 		/*RETURN CLIENTE*/
-		Cliente cliente = ClienteQueries.findClientById(entityManager, 1);
+		Cliente cliente = ClienteQueries.findClientById(entityManager, 2);
 		model.addAttribute("Cliente",cliente);
 		
 		/*RETURN*/
@@ -53,7 +53,7 @@ public class RootController {
 		return "logout";
 	}
 	
-	@GetMapping("/esteo-app/informacion-cliente")
+	@GetMapping("/informacion-cliente")
 	public String informacionCliente(Model model) {
 		
 		/*LOG*/
@@ -66,4 +66,7 @@ public class RootController {
 		/*RETURN*/
 		return "informacion-cliente";
 	}
+	
+	
+	
 }
