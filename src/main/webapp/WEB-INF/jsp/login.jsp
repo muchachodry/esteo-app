@@ -9,12 +9,16 @@
 <div class="container">
 	<div class="row align-items-center">
 		<div class="col-4 offset-4 align-self-center">	
-		    <form action="/esteo-app/login" method="post">               
+		    <form action="/osteo-app/login" method="post">               
 		        <fieldset>
 		            <legend>Acceso: </legend>
 		            <div class="form-group">
-			            <input class="input-bar" value="" placeholder="Usuario" type="text" name="username"/>
-			        	<input class="input-bar" value="" placeholder="Password" id="password" name="password" type="password">
+		            	<div class="input-bar">
+			            	<input class="ibs" value="" placeholder="Usuario" type="text" name="username"/>
+			        	</div>
+			        	<div class="input-bar">
+			        		<input class="ibs" value="" placeholder="Password" id="password" name="password" type="password">
+			        	</div>
 			        </div>    
 			        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 		            <div class="form-actions">

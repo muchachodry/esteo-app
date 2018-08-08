@@ -1,3 +1,11 @@
+/*MAQUETADO*/
+.w-left-bar{
+	
+}
+.left-col-cli{
+	color: #cbbde2;
+    background-color: #553d7b;
+}
 /*COLORS*/
 .bg-morado{
 	background-color: #563d7c;
@@ -8,21 +16,25 @@
 	width:100%;
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
-    margin-bottom: 20px;
     border: 0px;
     border-bottom: 1px solid #553d7b;
     transition: .2s;
+    margin-top: 20px
 }
 .input-bar:hover {
     border-bottom: 3px solid #553d7b;
     transition: .2s;
-    margin-bottom: 22px;
+    /*margin-bottom: -2px;*/
 }
 input:focus {
     outline: none !important;
 }
 input:visited {
     background-color: #fff !important;
+}
+.ibs{
+    border: 0px;
+    width: 100%;
 }
 
 /*BOTONES*/
@@ -44,4 +56,10 @@ input:visited {
 }
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(53, 21, 183, 0.35);
+}
+
+/*NAVBAR*/
+.main-nav{
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    border-bottom: 1px solid #322348;
 }

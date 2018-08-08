@@ -22,7 +22,7 @@ public class CalendarController {
 	
 	@ModelAttribute
 	public void addAttributes(Model model) {
-	    model.addAttribute("s","/esteo-app/static/home/resources");
+	    model.addAttribute("s","/osteo-app/static/home/resources");
 	}
 	
 	@GetMapping("/calendar")

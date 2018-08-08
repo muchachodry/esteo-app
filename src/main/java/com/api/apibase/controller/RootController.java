@@ -27,12 +27,12 @@ public class RootController {
 
 	@ModelAttribute
 	public void addAttributes(Model model) {
-	    model.addAttribute("s","/esteo-app/static/home/resources");
+	    model.addAttribute("s","/osteo-app/static/home/resources");
 	}
 	
 	@GetMapping({"", "/"})
 	public String root(Model model) {
-		/*LOG*/
+		/*LOG*/ 
 		log.info("Dentro de información cliente");
 		
 		/*RETURN CLIENTE*/

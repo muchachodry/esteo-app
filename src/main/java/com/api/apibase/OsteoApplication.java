@@ -6,9 +6,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-public class EsteoApplication {
+public class OsteoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EsteoApplication.class, args);
+		SpringApplication.run(OsteoApplication.class, args);
 	}
 }
