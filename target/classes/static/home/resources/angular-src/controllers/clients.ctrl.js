@@ -19,7 +19,7 @@ app.controller('clients',function($rootScope,$scope,$location,$http,clientStatus
 	$scope.onFilterClients = function(event){
 		var current_client_list = jQuery(".client-value");
 		var term = jQuery(".scc-input").val();
-		var regexp = new RegExp(term);
+		var regexp = new RegExp(term); //sa
 		current_client_list.each(function( key, value){
 			//if(value)
 			}
