@@ -40,5 +40,10 @@ public class ApiRestController {
 		List <Cliente> c = ClienteQueries.findClientsByName(entityManager, nombre);
 		return c;
     }
+	@RequestMapping("/api/allClients")
+    public List <Cliente> allClients() {
+		List <Cliente> c = ClienteQueries.findAllClients(entityManager);
+		return c;
+    }
 	
 }

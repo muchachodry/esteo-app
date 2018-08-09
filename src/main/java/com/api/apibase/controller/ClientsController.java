@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.api.apibase.model.Cliente;
 import com.api.apibase.model.ClienteQueries;
@@ -45,12 +46,13 @@ private static Logger log = Logger.getLogger(ClientsController.class);
 		return "clientes";
 	}
 	
-	/*@RequestMapping(value="/clientsPost", method=RequestMethod.POST)
-	public String indexPost(Model model,
+	/*@Transactional
+	@RequestMapping(value="/clientsPost", method=RequestMethod.POST)
+	public RedirectView indexPost(Model model,
 			@RequestParam String nombre){
 		log.info(nombre+" "+model);
 
-	    return "redirect:/";
-	} */
+	    return new RedirectView ("/osteo-app/clientes");
+	}*/
 	
 }

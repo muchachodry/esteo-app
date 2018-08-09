@@ -9,7 +9,7 @@
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    
-	    	<title>ESTEO-APP</title>
+	    	<title>OSTEO-APP</title>
 	    	
 	    	<!-- FONTS -->
 	    	<!-- online -->
@@ -22,6 +22,7 @@
 			<!-- JS -->
 			<script src="${s}/js/bootstrap.min.js"></script>
 	    	<script src="${s}/js/jquery-3.3.1.min.js"></script>
+	    	<script src="${s}/js/angular.min.js"></script>
   		</head>
   		<body>
   			<nav class="navbar navbar-expand-sm navbar-dark bg-morado main-nav">

@@ -4,22 +4,21 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <%@ include file="../jspf/header.jspf"%>
-<div class="container-fluid w-left-bar">
-	<div class="row">
+
+<script src="${s}/angular-src/app.js"></script>
+<script src="${s}/angular-src/app.settings.js"></script>
+<script src="${s}/angular-src/controllers/clients.ctrl.js"></script>
+<script src="${s}/angular-src/controllers/components/show-clients.drct.js"></script>
+<script src="${s}/angular-src/controllers/services/status-provider.svc.js"></script>
+
+<div ng-app="osteo-app" ng-controller="clients" class="container-fluid w-left-bar">
+	<div class="row main-row">
 		<nav class="col-3 left-col-cli nav nav-tabs">
-			<h2>Client List</h2>
 			<div class="col-12">
+			<span>nuevo Cliente</span>
+			<i class="material-icons">person_add</i>
+				<show-clients></show-clients>
 			</div>
-			<form action="/osteo-app/clientsPost" method="POST" >
-			<input type="text" name="nombre"/>  
-				<c:forEach items="${clientes}" var="clientes">
-						<div class="col-12">
-							<div class="sender">${clientes.nombre}</div>
-						</div>
-				</c:forEach>
-				<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}" />
-				<input type="submit"/>
-			</form>
 		</nav>
 		<div class="col-8">
 			<h2>Client Info</h2>

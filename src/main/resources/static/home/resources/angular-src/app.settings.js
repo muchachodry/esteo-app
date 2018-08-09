@@ -1,0 +1,1 @@
+const TEMPLATES="/osteo-app/static/home/resources/template/"
