@@ -12,15 +12,15 @@
 	</div>
 </div>
 
-<div ng-if="status.searched && !status.searching">
-	<h2>Clientes</h2>
+<div class="client-container" ng-if="status.searched && !status.searching">
+	
 	<div class="search-clients-container">
 		<input class="scc-input" placeholder="Filtra Clientes" ng-keyup="onFilterClients($event)" ng-focus="onFilterClients($event)"></input>
 		<i class="material-icons search-in-clients">search</i>
 	</div>
-	
-	
-	<div class="client-value" ng-repeat="cliente in data">
-		<a>{{cliente.nombre}}</a>
+	<div class="client-list">
+		<div class="client-value" ng-repeat="cliente in data">
+			<a ng-click="onShowClientInfo($event,cliente)">{{cliente.nombre}} {{cliente.apellido}}</a>
+		</div>
 	</div>
 </div>

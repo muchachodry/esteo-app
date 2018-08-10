@@ -15,13 +15,30 @@
 	<div class="row main-row">
 		<nav class="col-3 left-col-cli nav nav-tabs">
 			<div class="col-12">
-			<span>nuevo Cliente</span>
-			<i class="material-icons">person_add</i>
+				<div class="row title-clients">
+					<div class="col-6">
+						<h2>Clientes</h2>
+					</div>
+					<div class="col-6">
+						<a class="btn btn-primary log-in-btn bg-morado nclient" href="/osteo-app/nuevo-cliente">
+							<i class="material-icons new-client-button">person_add</i>
+						</a>
+					</div>
+				</div>
 				<show-clients></show-clients>
 			</div>
 		</nav>
 		<div class="col-8">
-			<h2>Client Info</h2>
+			<div ng-if="!status.select">
+				<h2>Seleccion</h2>
+			</div>
+			<div ng-if="status.select">
+				<h2>Dentro client info</h2>
+				<div class="cl-info-id">1</div>
+				<div class="cl-info-nombre">adrian</div>
+				<div class="cl-info-apellido">calvo</div>
+			</div>
+			
 		</div>
 	</div>
 </div>

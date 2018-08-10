@@ -76,6 +76,10 @@ input:visited {
     border-bottom: 1px solid #322348;
 }
 /*LEFT BAR CLIENTS*/
+.title-clients{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .search-in-clients{
 	float: right;
     position: relative;
@@ -84,11 +88,10 @@ input:visited {
     cursor: pointer;
 }
 .scc-input {
-    width: calc(100% - 4px);
+    width: 100%;
     border: 1px solid #342448;
     padding: 4px 30px 4px 10px;
     border-radius: 5px;
-    float: right;
 }
 .scc-input:focus:hover {
     border: 3px solid #cabde3;
@@ -99,6 +102,15 @@ input:visited {
     border: 3px solid #cabde3;
     transition: .3s;
     padding: 2px 28px 2px 8px;
+}
+.nclient{
+	float:right;
+}
+.search-clients-container{
+   	margin-bottom: 10px;
+}
+.client-list{
+    padding-left: 10px;
 }
 
 

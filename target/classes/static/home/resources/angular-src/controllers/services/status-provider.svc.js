@@ -3,7 +3,8 @@ app.factory('clientStatusProvider',function(){
 		searched:false,
 		searching:false,
 		error:false,
-		hasResults:false
+		hasResults:false,
+		select:null
 	}
 	var status=angular.copy(original_status);
 	
