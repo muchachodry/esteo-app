@@ -6,8 +6,7 @@
 
 <%@ include file="../jspf/header.jspf"%>
 
-<div class="container">
-	<div class="row align-items-center">
+	<div class="row align-items-center main-row">
 		<div class="col-4 offset-4 align-self-center">	
 		    <form action="/osteo-app/login" method="post">               
 		        <fieldset>
@@ -34,6 +33,5 @@
 		</div>
 		<%@ include file="../jspf/authinfo.jspf"%>	
 	</div>	
-</div>
 
 <%@ include file="../jspf/footer.jspf"%>

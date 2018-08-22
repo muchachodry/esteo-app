@@ -2,6 +2,13 @@
 html, body{
 	height:100%;
 }
+.container{
+	padding-top: 58px;
+}
+.container-fluid{
+	height:100%;
+	right:0px;
+}
 .w-left-bar{
 	height:100%	;
     padding-top: 58px;
@@ -119,6 +126,37 @@ input:visited {
 .sti{
     font-weight: 600;
     font-size: 17px;
+}
+.ib-nc{
+	border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    height: 35px;
+    outline: none;
+    transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.ib-nc:hover{
+    border: none;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.ib-nc:focus{
+    border: none;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.ib-nc:focus-within{
+    border: none;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.form-fdos{
+    color: #6c757d;
+	margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    width: 99%;
+    border: 0;
+    background-color: #0000ff00;
 }
 
 /*AJAX SPINNER*/
