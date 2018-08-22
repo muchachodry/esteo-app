@@ -46,6 +46,17 @@ private static Logger log = Logger.getLogger(ClientsController.class);
 		return "clientes";
 	}
 	
+	@GetMapping("/nuevo-cliente")
+	public String nuevoCLiente(Model model) {
+		
+		/*LOG*/
+		log.info("Dentro de nuevo cliente");
+		
+		/*RETURN*/
+		return "nuevo-cliente";
+	}
+	
+	
 	/*@Transactional
 	@RequestMapping(value="/clientsPost", method=RequestMethod.POST)
 	public RedirectView indexPost(Model model,

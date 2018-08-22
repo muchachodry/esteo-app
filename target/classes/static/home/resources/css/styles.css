@@ -112,7 +112,14 @@ input:visited {
 .client-list{
     padding-left: 10px;
 }
-
+/*CLIENT INFO*/
+.info-cliente-view{
+	color: #6c757d;
+}
+.sti{
+    font-weight: 600;
+    font-size: 17px;
+}
 
 /*AJAX SPINNER*/
 .sk-cube-grid {

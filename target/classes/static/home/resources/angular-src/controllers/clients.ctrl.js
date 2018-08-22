@@ -32,13 +32,15 @@ app.controller('clients',function($rootScope,$scope,$location,$http,clientStatus
 		});
 	};
 	
+	/**
+	 * Return and append client info in the view
+	 */
 	$scope.onShowClientInfo = function(event, cliente){
 		$scope.status.select = cliente.id;
-		
-		console.log(event);
-		console.log(cliente);
+		$scope.data.selectedClient = cliente;
+		console.log($scope.data.selectedClient);
 	};
-	
+		
 	/**
 	 * Init de client controller
 	 */

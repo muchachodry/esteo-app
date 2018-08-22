@@ -41,7 +41,6 @@ public class ClienteQueries {
 	public static List<Cliente> findAllClients(EntityManager entityManager){
 		try {
 			List <Cliente> p = entityManager.createQuery("FROM Cliente" , Cliente.class).getResultList();
-			
 			return p;
 			
 		} catch (Exception e) {
