@@ -22,6 +22,9 @@ html, body{
 .main-row{
 	height:100%;
 }
+.client-info-container{
+	margin:0px 20px;
+}
 /*COLORS*/
 .bg-morado{
 	background-color: #563d7c;
@@ -119,6 +122,13 @@ input:visited {
 .client-list{
     padding-left: 10px;
 }
+.client-value{
+	cursor: pointer;
+}
+.client-value:hover{
+	color: white;
+    border-bottom: 1px solid white;
+}
 /*CLIENT INFO*/
 .info-cliente-view{
 	color: #6c757d;
@@ -157,6 +167,41 @@ input:visited {
     width: 99%;
     border: 0;
     background-color: #0000ff00;
+}
+
+/*row new client*/
+.rnclient{
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    padding: 16px 16px 10px;
+    word-break: break-word;
+}
+.expandw{
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}
+
+.rntitle{
+	margin: 0px;
+    color: #6c757d;
+    padding-left: 10px;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.btnmsbmt{
+ 	margin-bottom: 15px;
+}
+
+
+/*DISABLE FORM INPUTS*/
+.disable-input-ac{
+    background: #dddddd;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08) !important;
 }
 
 /*AJAX SPINNER*/
@@ -220,4 +265,24 @@ input:visited {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
   } 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

@@ -1,27 +1,26 @@
 package com.api.apibase.model;
 
-import java.sql.Date;
 
 import javax.persistence.Column;
-//import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-//import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 @Table(name="clientes")
 public class Cliente {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String nombre;
 	private String apellido;
 	private Date fecha_nacimiento;
 	@Column(nullable=true)
-	private Float telf_movil;
+	private Integer telf_movil;
 	private String sexo;
 	private String embarazo;
 	private String trabajo;
@@ -56,10 +55,10 @@ public class Cliente {
 	public void setFecha_nacimiento(Date fecha_nacimiento) {
 		this.fecha_nacimiento = fecha_nacimiento;
 	}
-	public Float getTelf_movil() {
+	public Integer getTelf_movil() {
 		return telf_movil;
 	}
-	public void setTelf_movil(Float telf_movil) {
+	public void setTelf_movil(Integer telf_movil) {
 		this.telf_movil = telf_movil;
 	}
 	public String getSexo() {

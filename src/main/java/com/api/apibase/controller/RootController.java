@@ -65,8 +65,5 @@ public class RootController {
 		
 		/*RETURN*/
 		return "informacion-cliente";
-	}
-	
-	
-	
+	}	
 }

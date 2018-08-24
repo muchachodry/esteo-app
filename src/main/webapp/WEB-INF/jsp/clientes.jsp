@@ -29,22 +29,447 @@
 			</div>
 		</nav>
 		<div class="col-9 info-cliente-view">
-			<div ng-if="!status.select">
+			<div ng-if="status.select == null">
 				<h2>Seleccion</h2>
 			</div>
-			<div ng-if="status.select">
-				<h2>Información del Cliente</h2>
-				<div class="cl-name-info">
-					<div class="row">
-						<div class="col-1 cl-info-id" ng-if="data.selectedClient.id">
-							<span class="sti">Id: </span>{{data.selectedClient.id}}
-						</div>
-						<div class="col-3 cl-info-nombre" ng-if="data.selectedClient.nombre">
-							<span class="sti">Nombre: </span>{{data.selectedClient.nombre}}
-						</div>
-						<div class="col-3 cl-info-apellido" ng-if="data.selectedClient.apellido">
-							<span class="sti">Apellidos: </span>{{data.selectedClient.apellido}}</div>
-					</div>
+			<div ng-if="status.select != null">
+				<h2>Información del Cliente ID: {{data.selectedClient.id}}</h2>
+				<div class="client-info-container">
+					<h2 class="rntitle">Datos Personales</h2>
+	        		<div class="row rnclient">
+	        			<div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Nombre</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input class="form-fdos" value="{{data.selectedClient.nombre}}" autocomplete="off" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Apellidos</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input class="form-fdos" value="{{data.selectedClient.apellido}}" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Fecha de nacimiento</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input class="form-fdos" autocomplete="no" value="{{data.selectedClient.fecha_nacimiento}}" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Edad</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc disable-input-ac">
+						            	<input class="form-fdos" autocomplete="no" value="{{data.selectedClient.edad}}"  type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Sexo</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.sexo}}" class="form-fdos" autocomplete="off" disabled>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Embarazo</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.embarazo}}" class="form-fdos" autocomplete="off" disabled>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Dirección</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.direccion}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Teléfono</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc disable-input-ac">
+						            	<input value="{{data.selectedClient.telf_fijo}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Teléfono movil</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.telf_movil}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Correo</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc disable-input-ac">
+						            	<input value="{{data.selectedClient.correo}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <h2 class="rntitle">Datos Adicionales</h2>
+	        		<div class="row rnclient">
+	        			<div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Trabajo</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.trabajo}}" class="form-fdos" autocomplete="off" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Horas trabajo</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc disable-input-ac">
+						            	<input value="{{data.selectedClient.horas_trabajo}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Deporte</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.deporte}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+					            	</div>
+					        	</div>
+				        	</div>
+			        	</div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Horas deporte</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc disable-input-ac">
+						            	<input value="{{data.selectedClient.horas_deporte}}" class="form-fdos" autocomplete="no" type="text" name="horas_deporte" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <h2 class="rntitle">Hábitos</h2>
+	        		<div class="row rnclient">
+	        			<div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Comidas dia</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.comidas_dia}}" class="form-fdos" autocomplete="off" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Agua Cantidad</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.cantidad_agua}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Frut, Pesc, Verd</label>
+					            <div class="col-sm-9">
+					           		<div class="ib-nc">
+						            	<input value="{{data.selectedClient.fruta_verdura_pescado}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Sueño Reparador</label>
+					            <div class="col-sm-9">
+					            	<div class="ib-nc">
+						            	<input value="{{data.selectedClient.sueno_reparador}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Postura dormir</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.cantidad_agua}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Transito</label>
+					            <div class="col-sm-9">
+						             <div class="ib-nc">
+						            	<input value="{{data.selectedClient.transito}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Cada cuanto</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input value="{{data.selectedClient.transito_wc}}" class="form-fdos" autocomplete="no" type="text" disabled/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <!-- MUST FINISH -->
+			        <h2 class="rntitle">Contraindicaciones</h2>
+	        		<div class="row rnclient">
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Fiebre</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+						            	<input class="form-check-input" type="radio" name="fruta_verdura_pescado"  value="SI" disabled>
+							          	<label class="form-check-label" for="fruta_verdura_pescado">SI</label>
+					            	</div>
+									<div class="col-3">
+							          	<input class="form-check-input" type="radio" name="fruta_verdura_pescado"  value="No" checked disabled>
+							          	<label class="form-check-label" for="fruta_verdura_pescado">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Roturas oseas</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Taquicardias</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Osteoporosis</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Ganglios Inflamados</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Hipertensión</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled> 
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Cancer</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">SIDA</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Infección</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Flebitis</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Embolias</label>
+					            <div class="col-sm-9 row">
+					            	<div class="col-3">
+							            <input class="form-check-input" type="radio" name="sueno_reparador"  value="SI" disabled>
+							          	<label class="form-check-label" for="sueno_reparador">SI</label>
+						          	</div>
+						          	<div class="col-3">
+						          		<input class="form-check-input" type="radio" name="sueno_reparador"  value="No" checked disabled>
+						          		<label class="form-check-label" for="sueno_reparador">NO</label>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <h2 class="rntitle">Alergias</h2>
+	        		<div class="row rnclient">
+	        			<div class="col-md-6 col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Alergias</label>
+					            <div class="col-sm-9">
+						            <div class="ib-nc">
+						            	<input class="form-fdos" autocomplete="off" type="text" name="alergias"/>
+						            </div>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <h2 class="rntitle">Motivo de la consulta</h2>
+	        		<div class="row rnclient">
+	        			<div class="col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">Motivo</label>
+					            <div class="col-sm-9">
+					            	<div class="ib-nc disable-input-ac">
+						            	<input class="form-fdos" autocomplete="off" type="text" name="alergias" disabled></input>
+					            	</div>
+					            </div>
+					        </div>
+				        </div>
+				        <div class="col-12">
+			        		<div class="form-group row">
+			        			<label class="col-sm-3 col-form-label">rango dolor</label>
+					            <div class="col-sm-9">
+						            <input type="range" min="1" max="5" class="form-control-range" name="rango" disabled>
+					            </div>
+					        </div>
+				        </div>
+			        </div>
+			        <h2 class="rntitle">Diagnostico Medico</h2>
+				    <textarea class="rnclient expandw" autocomplete="off" name="diagnostico" disabled></textarea>
+			        <h2 class="rntitle">Observaciones</h2>
+	    			<textarea class="rnclient expandw" autocomplete="off" type="text" name="observaciones" disabled></textarea>
+	            	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	 
+					
+					
+					
+					
+					
+					
+					
 				</div>
 				<div class="cl-info-fecha">{{data.selectedClient.fecha_nacimiento}}</div>
 				<div class="cl-info-telf">{{data.selectedClient.telf_movil}}</div>

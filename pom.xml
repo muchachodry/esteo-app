@@ -5,9 +5,11 @@
 	
 	<groupId>com.api</groupId>
 	<artifactId>osteo-app</artifactId>
-	<name>osteo-app</name>
-	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
+	<name>osteo-app</name>
+	<description>osteo-app for management clients and dates</description>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -20,9 +22,9 @@
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+		<!--<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
-		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>-->
 	</properties>
 	
 	
@@ -30,8 +32,13 @@
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
@@ -71,16 +78,13 @@
 		 <dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-jdbc</artifactId>
-	        <version>4.3.6.RELEASE</version>
    		</dependency>
-	    <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+	    
 		<dependency>
     		<groupId>mysql</groupId>
     		<artifactId>mysql-connector-java</artifactId>
-		</dependency> 
+		</dependency>
+		
 		<!-- seguridad spring -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
